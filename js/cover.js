@@ -12,8 +12,7 @@
   ele_profile.css("padding-top", padTop_profile);
   // anystretch
   var cover_url = ele_profile.attr("alt");
-  if (cover_url.length)
-    ele_cover.anystretch(cover_url);
+  ele_cover.anystretch(cover_url);
 
   $(window).on('resize', function() {
     h_win = $(window).height(), h_cover = h_win - h_nav, padTop_profile = (h_win - h_profile) * 0.4;
