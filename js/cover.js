@@ -12,7 +12,7 @@
   ele_profile.css("padding-top", padTop_profile);
   // anystretch
   var cover_url = ele_profile.attr("alt");
-  alert("cover_url");
+  alert(cover_url);
   if (cover_url.length)
     ele_cover.anystretch(cover_url);
 
