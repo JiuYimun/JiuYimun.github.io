@@ -19,7 +19,7 @@
     <script src="/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
     <script src="/fancybox/jquery.fancybox.pack.js"></script>
-    <script src="/js/cover.js"></script>
+    <!--<script src="/js/cover.js"></script>-->
 
     <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
 
@@ -141,6 +141,29 @@
             'titlePosition': 'inside'
         });
     })(jQuery);
+</script>
+
+<script type="text/javascript">
+
+  // move cover
+  var ele_cover = $("#cover").attr("value");
+  ele_cover.appendTo($("#header"));
+  // set height of the cover  
+  var ele_profile = $("#profile");
+  var h_win = $(window).height(), h_nav = $("#main-nav").height(), h_cover = h_win - h_nav, 
+  h_profile = ele_profile.height(), padTop_profile = (h_win - h_profile) * 0.4;
+  ele_cover.height(h_cover);
+  // set margin-top of profile
+  ele_profile.css("padding-top", padTop_profile);
+  // anystretch
+  var cover_url = ele_profile.attr("alt");
+  ele_cover.anystretch(cover_url);
+
+  $(window).on('resize', function() {
+    h_win = $(window).height(), h_cover = h_win - h_nav, padTop_profile = (h_win - h_profile) * 0.4;
+    ele_cover.height(h_cover);
+    ele_profile.css("padding-top", padTop_profile);
+  });
 </script>
 
 <script type="text/javascript">
