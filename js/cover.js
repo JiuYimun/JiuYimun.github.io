@@ -1,7 +1,7 @@
 (function($){
 
   // move cover
-  var ele_cover = $("#cover");
+  var ele_cover = $("#cover")attr("value");
   alert(ele_cover);
   ele_cover.appendTo($("#header"));
   // set height of the cover  
