@@ -5,6 +5,7 @@
   ele_cover.appendTo($("#header"));
   // set height of the cover  
   var ele_profile = $("#profile");
+  alert(ele_profile);
   var h_win = $(window).height(), h_nav = $("#main-nav").height(), h_cover = h_win - h_nav, 
   h_profile = ele_profile.height(), padTop_profile = (h_win - h_profile) * 0.4;
   ele_cover.height(h_cover);
@@ -12,7 +13,6 @@
   ele_profile.css("padding-top", padTop_profile);
   // anystretch
   var cover_url = ele_profile.attr("alt");
-  alert("cover_url");
   ele_cover.anystretch(cover_url);
 
   $(window).on('resize', function() {
